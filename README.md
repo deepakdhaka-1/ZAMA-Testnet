@@ -45,4 +45,9 @@ Compile :
 # Compile
 npx hardhat compile
 ```
+Edit ENV file
+```
+nano .env
+```
+Store your private keys without 0x in it.
 
