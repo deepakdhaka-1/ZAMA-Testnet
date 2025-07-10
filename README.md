@@ -7,6 +7,15 @@
 * **Windows**: Install Linux Ubuntu using WSL by following this [guide](https://github.com/0xmoei/Install-Linux-on-Windows)
 * **Codespace**: If you don't have VPS or Windows WSL, you can use [Github Codespace](https://github.com/codespaces), create a blank template and run your codes.
 
+##Features
+- Deploys a contract (FHECounter) to the Sepolia network for each private key.
+- Reuses compile artifacts unless code has changed.
+- Displays full transaction hash and deployed contract address.
+- If a key is missing or .env has issues, the script skips the iteration safely and proceeds.
+- Avoids redundant compilation or deployment if contract already exists.
+- Accepts interactive `npx hardhat vars` set input via automated echo piping or subprocess input streams.
+
+
 ## Install Dependecies
 ```console
 # Packages:
@@ -51,3 +60,10 @@ nano .env
 ```
 Store your private keys without 0x in it.
 
+#Make it executable:
+```
+chmod +x deploy_loop.sh
+```
+```
+./deploy_loop.sh
+```
